@@ -1,0 +1,20 @@
+        <footer id = "bigfooter">
+            <div style = "text-align:center; padding:15px;">
+                <i class="fa fa-copyright" aria-hidden="true"></i> Kazamori LLC.
+                <p>
+                {{ "Powered by [Hugo](https://gohugo.io). Themed by [min_night](https://github.com/nathancday/min_night)." | markdownify }}
+                </p>
+            </div>
+        </footer>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', '{{ .Site.GoogleAnalytics }}');
+        </script>
+       
+    </body>
+
+</html>

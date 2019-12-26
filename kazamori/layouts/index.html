@@ -1,0 +1,30 @@
+{{ partial "header" . }}
+
+<main class = "content-box">
+
+    <div class="intro">
+
+        <div class="avatar">
+            <img class="img-responsive" src="{{ .Site.BaseURL }}img/{{ .Site.Params.logo }}" alt="Whoopsies, this is my bad side!" style = "margin: 0 auto;">
+        </div>
+
+        <div style = "margin-top: 50px">
+            <h2>{{ .Site.Params.description }}</h2>
+        </div>
+    </div>
+
+    <br />
+
+    <div>
+        {{ $paginator := .Paginate (where .Pages "Type" "news") }}
+        {{ range $paginator.Pages }}
+            <h3>{{ .Title }}</h3>
+            {{ range (.Paginator 5).Pages }}
+                {{partial "list-item-project.html" .}}
+            {{ end }}
+        {{ end }}
+    </div>
+
+</main>
+
+{{ partial "footer" . }}

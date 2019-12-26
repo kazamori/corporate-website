@@ -1,0 +1,76 @@
+baseURL = "/"
+languageCode = "ja-jp"
+title = "kazamori"
+description = ""
+theme = "min_night"
+disqusShortname = ""
+googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "public/"]
+copyright = "Kazamori LLC"
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[params]
+    author = "Kazamori LLC"
+    description = ""  # consider later
+    logo = "green-logo-with-typography.png"
+    ogpLogo = "green-logo-for-ogp.png"
+    rssLogo = "green-logo-with-spaces.png"
+    githubUsername = "kazamori"
+    accent = "#009933" # dark colors do best
+    backgroundColor = "#f5f5f5"
+    font = "M PLUS 1p" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "lakeside-light" # make this match accent
+    highlightLanguages = ["bash", "python", "go", "java"]
+
+# adjust these as you see fit
+[[menu.main]]
+    url = "/"
+    name = "ホーム"
+    weight = 1
+
+[[menu.main]]
+    url = "/about/"
+    name = "会社概要"
+    weight = 2
+
+[[menu.main]]
+    url = "/service/"
+    name = "サービス"
+    weight = 3
+
+[[menu.main]]
+    url = "/case/"
+    name = "事例紹介"
+    weight = 4
+
+[[menu.main]]
+    url = "/news/"
+    name = "ニュース"
+    weight = 5
+
+[[menu.main]]
+    url = "/blog/"
+    name = "ブログ"
+    weight = 6
+
+[[menu.main]]
+    url = "/tags/"
+    name = "タグ"
+    weight = 7
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "mailto:contact@kazamori.jp"
+    name = "far fa-envelope"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/kazamori"
+    name = "fab fa-github"
+    weight = 2
