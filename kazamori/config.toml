@@ -42,7 +42,7 @@ copyright = "Kazamori LLC"
     weight = 3
 
 [[menu.main]]
-    url = "/case/"
+    url = "/cases/"
     name = "事例紹介"
     weight = 4
 
@@ -52,7 +52,7 @@ copyright = "Kazamori LLC"
     weight = 5
 
 [[menu.main]]
-    url = "/blog/"
+    url = "/blogs/"
     name = "ブログ"
     weight = 6
 
