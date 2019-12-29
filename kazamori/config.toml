@@ -9,9 +9,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "public/"]
 copyright = "Kazamori LLC"
 
 [permalinks]
-    cases = "/:year/:month/:slug/"
-    blogs = "/:year/:month/:day/:slug/"
-    news = "/:year/:month/:day/:slug/"
+    cases = "/:sections/:year/:month/:slug/"
+    blogs = "/:sections/:year/:month/:day/:slug/"
+    news = "/:sections/:year/:month/:day/:slug/"
 
 [params]
     author = "Kazamori LLC"
