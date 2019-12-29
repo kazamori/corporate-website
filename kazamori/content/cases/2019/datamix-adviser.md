@@ -1,5 +1,6 @@
 ---
 title: "株式会社データミックス様 技術顧問"
+slug: datamix-adviser
 date: 2019-12-12T16:27:29+09:00
 with_date: true
 tags: ["consulting", "adviser"]

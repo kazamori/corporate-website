@@ -1,5 +1,6 @@
 ---
 title: "Hugoで企業ホームページを作る"
+slug: use-fugo
 date: 2019-12-27T17:07:18+09:00
 with_date: true
 tags: ["hugo", "golang"]

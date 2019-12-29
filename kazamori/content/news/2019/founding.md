@@ -1,5 +1,6 @@
 ---
 title: "会社を設立しました"
+slug: founding
 date: 2019-12-09T13:30:00+09:00
 with_date: true
 tags: ["corporation", "naming"]
