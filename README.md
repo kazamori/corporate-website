@@ -75,6 +75,16 @@ Press Ctrl+C to stop
 
 Open http://localhost:1313/ via web browser.
 
+## Create Contents
+
+To create new contents, use the `new` command with the path in contents directory.
+
+```bash
+$ hugo new blogs/2019/customize-hugo-url-path.md
+path/to/corporate-website/kazamori/content/blogs/2019/customize-hugo-url-path.md created
+$ vi content/blogs/2019/customize-hugo-url-path.md
+```
+
 ## Deploy
 
 To deploy static site distribution into any directory is like this.
