@@ -23,9 +23,7 @@ copyright = "Kazamori LLC"
     accent = "#009933" # dark colors do best
     backgroundColor = "#f5f5f5"
     font = "M PLUS 1p" # should match the name on Google Fonts!
-    highlight = true
-    highlightStyle = "lakeside-light" # make this match accent
-    highlightLanguages = ["bash", "python", "go", "java"]
+    highlight = false
     css = ["css/custom.css"]
 
 # adjust these as you see fit
