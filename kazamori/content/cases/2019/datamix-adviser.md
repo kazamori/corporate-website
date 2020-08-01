@@ -11,6 +11,8 @@ tags: ["consulting", "adviser"]
 データミックス様では次のビジョン・ミッションにより、
 データサイエンティストの育成ならびに企業へのデータサイエンスの促進・強化を行なっています。
 
+> {{< figure src="/cases/2019/images/DataMix-side-transparent.png" link="https://datamix.co.jp/" target="_blank" alt="DataMix LOGO" width="50%" >}}
+
 > ビジョン
 > : ほとんどの企業に経理やマーケティング部があるように、
 > : 「1企業1データサイエンスチーム」の実現
@@ -44,5 +46,3 @@ Web アプリケーション開発やシステム管理ツール、ハードウ�
 
 データミックス様へ訪問して打ち合わせするときもありますが、
 基本的にはオンライン上でのコミュニケーションによりサービスを提供しています。
-
-[![DataMix LOGO](/cases/2019/images/DataMix-side-transparent.png)](https://datamix.co.jp/)
