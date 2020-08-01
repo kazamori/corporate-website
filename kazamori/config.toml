@@ -26,6 +26,7 @@ copyright = "Kazamori LLC"
     highlight = true
     highlightStyle = "lakeside-light" # make this match accent
     highlightLanguages = ["bash", "python", "go", "java"]
+    css = ["css/custom.css"]
 
 # adjust these as you see fit
 [[menu.main]]

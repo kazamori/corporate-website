@@ -19,15 +19,26 @@ Web アプリケーションを開発するときに必要なインフラの初�
 
 当社はお客様の困ったときに相談でき、一緒に課題を考えながら解決に取り組む会社になります。
 
+{{< figure src="/img/green-logo-with-spaces.png" class="about-corp-logo" alt="logo" >}}
+
 ## 企業情報
 
-* 会社名: カザモリ合同会社 (Kazamori LLC)
-* 所在地: 〒650-0012 兵庫県神戸市中央区北長狭通4-2-19 アムズ元町ビル4F-9
-* 代表社員: 森本 哲也
-* 事業内容:
-  * システム開発
-  * ITコンサルティング
-  * 研修・教育サービス
+{{< p class="clear-float" >}}
+
+会社名: カザモリ合同会社 (Kazamori LLC)
+
+所在地:
+* 〒650-0012
+* 兵庫県神戸市中央区北長狭通4-2-19
+* アムズ元町ビル4F-9
+
+代表社員: 森本 哲也
+
+事業内容:
+
+* システム開発
+* ITコンサルティング
+* 研修・教育サービス
 
 ## 代表社員の業務外活動
 
@@ -71,27 +82,38 @@ Web アプリケーションを開発するときに必要なインフラの初�
 
 ### 著作/翻訳
 
-* できる 仕事がはかどるPython自動処理 全部入り。
-  * https://book.impress.co.jp/books/1118101147
-  * 4名による共著
-  * 担当した章
-    * Chapter 1　Pythonのプログラムを利用する前に
-    * Chapter 2　コマンドラインインターフェース
-    * Chapter 3　サードパーティライブラリのインストール
-    * Chapter 4　Pythonのおさらい
-    * Chapter 5　ファイルの操作と圧縮・展開
-    * Chapter 7　CSVファイルの処理
-    * Chapter 8　テキストデータの処理
-    * Chapter 9　Microsoft Excelとの連携
+#### Software Design 2020年5月号の特集記事
 
-* フリーライブラリで学ぶ機械学習入門
-  * https://www.shuwasystem.co.jp/book/9784798049618.html
-  * 4名による共著
-  * 担当した章
-    * EX 補足資料のインストールとPython入門
+* https://gihyo.jp/magazine/SD/archive/2020/202005
+* 著者
+* 第3章：Pythonでも型チェックしよう
+  * 漸進的型付けとは
+  * 型ヒントとは
+  * 型チェッカーとは
+  * Protocol と Structural subtyping
 
-* エキスパートPythonプログラミング改訂2版
-  * https://www.kadokawa.co.jp/product/301801000262/
-  * 5名による翻訳
+#### できる 仕事がはかどるPython自動処理 全部入り。
 
-![LOGO](/img/green-logo-with-spaces.png)
+* https://book.impress.co.jp/books/1118101147
+* 4名による共著
+* 担当した章
+  * Chapter 1　Pythonのプログラムを利用する前に
+  * Chapter 2　コマンドラインインターフェース
+  * Chapter 3　サードパーティライブラリのインストール
+  * Chapter 4　Pythonのおさらい
+  * Chapter 5　ファイルの操作と圧縮・展開
+  * Chapter 7　CSVファイルの処理
+  * Chapter 8　テキストデータの処理
+  * Chapter 9　Microsoft Excelとの連携
+
+#### フリーライブラリで学ぶ機械学習入門
+
+* https://www.shuwasystem.co.jp/book/9784798049618.html
+* 4名による共著
+* 担当した章
+  * EX 補足資料のインストールとPython入門
+
+#### エキスパートPythonプログラミング改訂2版
+
+* https://www.kadokawa.co.jp/product/301801000262/
+* 5名による翻訳
