@@ -10,3 +10,9 @@ figure.about-corp-logo {
 p.clear-float {
     clear: left;
 }
+
+p.sample-style {
+    color: blue;
+    font-style: italic;
+    margin-left: 25px;
+}
