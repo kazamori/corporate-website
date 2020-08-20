@@ -52,14 +52,14 @@ tags: [diy, office]
 * ドリルセット
 * ホールソー (穴あけ用の工具)
 
-{{< figure src="/blogs/2020/images/diy/IMG01.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG01.jpg" alt="room" width=768 >}}
 
 ホールソーは単品でも販売されています。
 セットで購入する方がすごく割安だったのと、
 どのぐらいのサイズのものを購入すればいいのか、
 私がよくわからなかったのでセットで購入してみました。
 
-{{< figure src="/blogs/2020/images/diy/IMG02.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG02.jpg" alt="room" width=768 >}}
 
 実際に電源テーブルの太さや本数とホールソーのサイズを見比べてみました。
 その結果、今回の穴あけは50mmのサイズを使いました。
@@ -77,22 +77,22 @@ tags: [diy, office]
 久しぶりに触ったので最初は経の小さいドリルを付け、
 回転速度やトルクなどを控えめにしつつ始めました。
 
-{{< figure src="/blogs/2020/images/diy/IMG03.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG03.jpg" alt="room" width=768 >}}
 
 わかりにくいですが、以下は机の下から貫通した穴を撮った写真です。
 
-{{< figure src="/blogs/2020/images/diy/IMG04.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG04.jpg" alt="room" width=768 >}}
 
 経の小さいドリルで貫通してからさらに大きい経のドリルで再度貫通させて少しずつ穴を広げました。
 
-{{< figure src="/blogs/2020/images/diy/IMG05.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG05.jpg" alt="room" width=768 >}}
 
 慣れてきて後から思い返してみれば、最初から経の大きいドリルで穴あけをしてもよかったかもしれません。
 
 中心となる穴があいたら電動ドライバーの先端をドリルからホールソーに付け替えます。
 あらかじめドリルで貫通させておいた穴を中心にしてホールソーで削っていきます。
 
-{{< figure src="/blogs/2020/images/diy/IMG06.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG06.jpg" alt="room" width=768 >}}
 
 以下は机の下から撮った写真です。
 
@@ -101,14 +101,14 @@ tags: [diy, office]
 寝転がって電動ドライバーで削るとおがくずが上から振ってきてかなり苦しかったです。
 たくさん削るわけではないですが、上から振ってくるおがくず対策が必要です。
 
-{{< figure src="/blogs/2020/images/diy/IMG07.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG07.jpg" alt="room" width=768 >}}
 
 ホールソーで削っていると、以下のようにおがくずが発生します。
 適当に掃除機で吸いとりながら削ることと掃除を繰り返します。
 
 削っている穴がある程度深くなってきたらホールソーの真ん中のドリルを外します。
 
-{{< figure src="/blogs/2020/images/diy/IMG08.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG08.jpg" alt="room" width=768 >}}
 
 私は当初ドリルを外すことを失念していて一定以上深く削れないなぁと少し立ち止まっていました。
 中心が少し黒く焦げているのは真ん中のドリルのバネと机の天板との摩擦で熱をもったためでした。
@@ -120,18 +120,18 @@ tags: [diy, office]
 そんな失敗もしながら穴あけも貫通しました。
 電動ドライバーのパワーにも依りますが、20-30分ぐらいやれば穴があくと思います。
 
-{{< figure src="/blogs/2020/images/diy/IMG09.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG09.jpg" alt="room" width=768 >}}
 
 実際にホールソーで削りとった机の破片です。
 机の下からの削り具合が真っ直ぐではなかったので少しずれています。
 素人が初めてやるとこんなところでしょうか。
 
-{{< figure src="/blogs/2020/images/diy/IMG10.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG10.jpg" alt="room" width=768 >}}
 
 ホールソーで削ったばかりだと穴の内部がガタガタの状態なので紙やすりできれいにします。
 粗めの紙やすりで滑らかにしてからもう少し細かい紙やすりで磨きます。
 
-{{< figure src="/blogs/2020/images/diy/IMG11.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG11.jpg" alt="room" width=768 >}}
 
 言うてもケーブル類を通すだけの穴なので手で触って違和感がないぐらいです。
 そこまでがんばって磨いてはいません。
@@ -139,7 +139,7 @@ tags: [diy, office]
 冒頭で管理会社のスタッフさんに指示された通り、
 パッとみた雰囲気ではきれいに穴があきました。
 
-{{< figure src="/blogs/2020/images/diy/IMG12.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG12.jpg" alt="room" width=768 >}}
 
 このままでもケーブル類を通すという目的は果たせます。
 
@@ -147,9 +147,9 @@ tags: [diy, office]
 オンラインショップで検索すると、50mmのカバーはいくつか見つかりました。
 もしかしたら50mmは一般的な穴のサイズの1つなのかもしれません。
 
-{{< figure src="/blogs/2020/images/diy/IMG13.jpg" alt="room" width=600 >}}
-{{< figure src="/blogs/2020/images/diy/IMG14.jpg" alt="room" width=600 >}}
-{{< figure src="/blogs/2020/images/diy/IMG15.jpg" alt="room" width=600 >}}
+{{< figure src="/blogs/2020/images/diy/IMG13.jpg" alt="room" width=768 >}}
+{{< figure src="/blogs/2020/images/diy/IMG14.jpg" alt="room" width=768 >}}
+{{< figure src="/blogs/2020/images/diy/IMG15.jpg" alt="room" width=768 >}}
 
 こういった穴のカバーを付けることで少し高級感が出たように思います。
 
