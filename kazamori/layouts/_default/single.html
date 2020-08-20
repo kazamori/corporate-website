@@ -28,9 +28,22 @@
     {{ if .Site.Params.talkHost }}
     {{ partial "talk.html" . }}
     {{ end }}
-
+ 
     {{ if .Site.Params.coralHost }}
     {{ partial "coral.html" . }}
+    {{ end }}
+
+    {{ with .Parent.Pages.Prev . }}
+    <span class="prev-page far fa-arrow-alt-circle-left">
+      <a href="{{ .RelPermalink }}">{{ substr .Title 0 35 }}</a>
+    </span>
+    {{ end }}
+
+    {{ with .Parent.Pages.Next . }}
+    <span class="next-page">
+      <a href="{{ .RelPermalink }}">{{ substr .Title 0 35 }}</a>
+      <span class="far fa-arrow-alt-circle-right" />
+    </span>
     {{ end }}
 
 </main>

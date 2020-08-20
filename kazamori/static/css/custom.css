@@ -16,3 +16,13 @@ p.sample-style {
     font-style: italic;
     margin-left: 25px;
 }
+
+span.prev-page {
+    margin-top: 25px;
+    float: left;
+}
+
+span.next-page {
+    margin-top: 25px;
+    float: right;
+}
