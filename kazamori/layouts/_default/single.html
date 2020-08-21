@@ -7,11 +7,11 @@
     <br> <div class="text-justify">{{ .Content }}</div>
 
     <!-- related posts with the same tags -->
-    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "blogs") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
 
     {{ if $related }}
 
-        <h4 class="page-header">Related</h4>
+        <h4 class="page-header">関連記事</h4>
 
         {{ range $related }} {{ partial "list-item" . }} {{ end }}
 
