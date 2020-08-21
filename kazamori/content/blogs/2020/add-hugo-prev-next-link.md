@@ -33,7 +33,7 @@ Twitter のタイムラインでたまたま JJUG サイトを
 
 > Hugo’s templates are context aware and make a large number of values available to you as you’re creating views for your website.
 
-Hugo にはテンプレートには組み込み変数がたくさん用意されているとあります。
+Hugo のテンプレートには組み込み変数がたくさん用意されているとあります。
 
 [Pages Methods](https://gohugo.io/variables/pages/) によると、
 `Pages` オブジェクトがもつ `.Next`/`.Prev` メソッドを使うことで
@@ -55,7 +55,7 @@ Hugo にはテンプレートには組み込み変数がたくさん用意され
 
 例えば、ブログのコンテンツならば、ブログ内にあるコンテンツのみを扱いたいです。
 
-そこで `.Parent.Pages` からコンテンツを取得することで意図したメニュー内のコンテンツのみを扱えます。
+そこで `.Parent.Pages` からコンテンツを取得することでメニュー内のコンテンツのみを扱えます。
 
 ```html
 {{ with .Parent.Pages.Next . }}{{ .RelPermalink }}{{ end }}
@@ -76,7 +76,7 @@ Hugo にはテンプレートには組み込み変数がたくさん用意され
 [substr](https://gohugo.io/functions/substr/) を使ってタイトルを35文字以内にしています。
 
 これらの設定により、
-次のように前後を意図する矢印アイコンとコンテンツのタイトルリンクが表示されるようになりました。
+次のように前後を示す矢印アイコンとコンテンツのタイトルリンクが表示されるようになりました。
 
 {{< figure src="/blogs/2020/images/kazamori-contents-bottom1.png"
            width=768
