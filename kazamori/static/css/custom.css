@@ -26,3 +26,7 @@ span.next-page {
     margin-top: 25px;
     float: right;
 }
+
+figure.common-style {
+    text-align: center;
+}
