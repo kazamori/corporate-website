@@ -1,32 +1,24 @@
 {{ partial "header" . }}
 
 <main>
-
     {{ partial "list-item" . }}
     <br />
     <div class="text-justify">{{ .Content }}</div>
 
+    <!-- previous and next page links -->
+    {{ partial "prev-next-links" . }}
+</main>
+
+    <!-- social buttons -->
+    {{ partial "share" . }}
+
+<main>
     <!-- related posts with the same tags -->
     {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "blogs") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
     {{ if $related }}
-        <h4 class="page-header">関連記事</h4>
+        <h4>関連記事</h4>
         {{ range $related }} {{ partial "list-item" . }} {{ end }}
     {{ end }}
-
-    <!-- previous and next page links -->
-    {{ with .Parent.Pages.Prev . }}
-    <span class="prev-page far fa-arrow-alt-circle-left">
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </span>
-    {{ end }}
-
-    {{ with .Parent.Pages.Next . }}
-    <span class="next-page">
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      <span class="far fa-arrow-alt-circle-right" />
-    </span>
-    {{ end }}
-
 </main>
 
 {{ partial "footer.html" . }}
