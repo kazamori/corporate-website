@@ -3,7 +3,7 @@ title: "Repro株式会社様 業務委託"
 slug: repro-subcontract
 date: 2020-10-14T09:10:08+09:00
 with_date: true
-tags: ["subcontract", "adviser"]
+tags: [subcontract, adviser, repro]
 ---
 
 [Repro](https://repro.io/) 様でシステム開発のお手伝いをした内容を紹介します。
