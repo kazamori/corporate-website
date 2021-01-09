@@ -67,7 +67,7 @@ copyright = "Kazamori LLC"
 # The list of available icons can be found at http://fontawesome.io/icons/
 
 [[menu.icon]]
-    url = "mailto:contact@kazamori.jp"
+    url = "mailto:contact+corporate@kazamori.jp"
     name = "far fa-envelope"
     weight = 1
 
