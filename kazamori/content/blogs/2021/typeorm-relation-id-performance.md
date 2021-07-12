@@ -117,16 +117,22 @@ test=# select count(*) from post1;
 
 ### 検証対象の Entity オブジェクト
 
-`@ManyToMany` と `@ManyToOne` の関連をもつ次のような3つの Entity を用意します。
+`@ManyToMany` と `@ManyToOne` と `@OneToOne` の関連をもつ3つの Entity を用意します (後述) 。
+
+* Post1
+* Post2
+* Post3
 
 TypeORM でデータを取得するとき、大きくわけて2通りの API があります。
 
 * [Repository APIs](https://github.com/typeorm/typeorm/blob/master/docs/repository-api.md)
 * [Select using Query Builder](https://github.com/typeorm/typeorm/blob/master/docs/select-query-builder.md)
 
-Repository API は高レベル API となっており、内部的には Query Builder を使います。Query Builder を使った方が生成したい SQL をカスタマイズできます。
+Repository API は高レベル API となっており、内部的には Query Builder を使います。
+Query Builder を使うやり方の方が生成したい SQL をカスタマイズできます。
 
-Repository.find() と QueryBuilder.getMany() では Eager relations の扱いが異なるので REPL を使って一緒に振る舞いを確認していきます。
+Repository.find() と QueryBuilder.getMany() では Eager relations の扱いが異なります。
+この後、Post1, Post2, Post3 の Entity を説明しながら REPL を使って振る舞いを確認していきます。
 
 #### Post1
 
@@ -164,7 +170,7 @@ export class Post1 extends Base<Post1> {
 }
 ```
 
-それぞれの Entity の設定と振る舞いの違いがわかりやすいように REPL を使って振る舞いを確認してみます。
+それぞれの Entity の設定と振る舞いの違いがわかりやすいように REPL を使って確認していきます。
 
 ```bash
 $ yarn repl
