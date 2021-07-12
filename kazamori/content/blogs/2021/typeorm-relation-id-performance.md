@@ -119,6 +119,15 @@ test=# select count(*) from post1;
 
 `@ManyToMany` と `@ManyToOne` の関連をもつ次のような3つの Entity を用意します。
 
+TypeORM でデータを取得するとき、大きくわけて2通りの API があります。
+
+* [Repository APIs](https://github.com/typeorm/typeorm/blob/master/docs/repository-api.md)
+* [Select using Query Builder](https://github.com/typeorm/typeorm/blob/master/docs/select-query-builder.md)
+
+Repository API は高レベル API となっており、内部的には Query Builder を使います。Query Builder を使った方が生成したい SQL をカスタマイズできます。
+
+Repository.find() と QueryBuilder.getMany() では Eager relations の扱いが異なるので REPL を使って一緒に振る舞いを確認していきます。
+
 #### Post1
 
 categoryIds と userId に `@RelationId` によるプロパティをもちます。
@@ -155,7 +164,7 @@ export class Post1 extends Base<Post1> {
 }
 ```
 
-それぞれの Entity の違いがわかりやすいように REPL を使って振る舞いを確認してみます。
+それぞれの Entity の設定と振る舞いの違いがわかりやすいように REPL を使って振る舞いを確認してみます。
 
 ```bash
 $ yarn repl
@@ -164,7 +173,9 @@ $ yarn repl
 >
 ```
 
-post1 の Entity を取得したタイミングで `@RelationId` の機能により categoryIds と userId をプロパティに保持していることがわかります。
+post1 の Entity を取得したタイミングで `@RelationId` の機能により categoryIds と userId をプロパティに保持していることがわかります。Repository API を使うときも Query Builder を使うときも違いはありません。
+
+* Repository API を使うとき
 
 ```typescript
 > const post1 = await getConnection().getRepository(Post1).findOne()
@@ -172,6 +183,21 @@ query: SELECT "Post1"."id" AS "Post1_id", "Post1"."contents" AS "Post1_contents"
 query: SELECT "Post1_categories_rid"."post1Id" AS "post1Id", "Post1_categories_rid"."categoryId" AS "categoryId" FROM "category" "category" INNER JOIN "post1_categories_category" "Post1_categories_rid" ON ("Post1_categories_rid"."post1Id" = $1 AND "Post1_categories_rid"."categoryId" = "category"."id") ORDER BY "Post1_categories_rid"."categoryId" ASC, "Post1_categories_rid"."post1Id" ASC -- PARAMETERS: [1]
 
 > post1
+Post1 {
+  id: 1,
+  contents: 'contents-1',
+  createdAt: 2021-07-11T16:42:12.628Z,
+  updatedAt: 2021-07-11T16:42:12.628Z,
+  categoryIds: [ 1, 2, 3 ],
+  userId: 1
+}
+```
+
+* Query Builder を使うとき
+
+```typescript
+> await getConnection().getRepository(Post1).createQueryBuilder().limit(1).getOne()
+
 Post1 {
   id: 1,
   contents: 'contents-1',
@@ -234,6 +260,9 @@ export class Post2 extends Base<Post2> {
 
 同様に REPL を使って Entity を取得します。
 `@RelationId` をもっていないので categoryIds と userId はありません。
+Repository API を使うときも Query Builder を使うときも違いはありません。
+
+* Repository API を使うとき
 
 ```typescript
 > const post2 = await getConnection().getRepository(Post2).findOne()
@@ -281,6 +310,20 @@ Post2 {
 }
 ```
 
+* Query Builder を使うとき
+
+```typescript
+> await getConnection().getRepository(Post2).createQueryBuilder().limit(1).getOne()
+query: SELECT "Post2"."id" AS "Post2_id", "Post2"."contents" AS "Post2_contents", "Post2"."createdAt" AS "Post2_createdAt", "Post2"."updatedAt" AS "Post2_updatedAt", "Post2"."userId" AS "Post2_userId", "Post2"."attachId" AS "Post2_attachId" FROM "post2" "Post2" LIMIT 1
+
+Post2 {
+  id: 1,
+  contents: 'contents-1',
+  createdAt: 2021-07-11T16:42:13.392Z,
+  updatedAt: 2021-07-11T16:42:13.392Z
+}
+```
+
 #### Post3
 
 Post2 と比べて、categories と attach を [Eager relations](https://github.com/typeorm/typeorm/blob/master/docs/eager-and-lazy-relations.md#eager-relations) として設定した Entity を作成します。
@@ -304,6 +347,9 @@ Post2 と比べて、categories と attach を [Eager relations](https://github.
 ```
 
 REPL を使って Entity を取得します。
+
+* Repository API を使うとき
+
 post3 を取得したタイミングで categories と attach も取得されていることがわかります。
 
 ```typescript
@@ -312,6 +358,44 @@ query: SELECT DISTINCT "distinctAlias"."Post3_id" as "ids_Post3_id" FROM (SELECT
 query: SELECT "Post3"."id" AS "Post3_id", "Post3"."contents" AS "Post3_contents", "Post3"."createdAt" AS "Post3_createdAt", "Post3"."updatedAt" AS "Post3_updatedAt", "Post3"."userId" AS "Post3_userId", "Post3"."attachId" AS "Post3_attachId", "Post3_categories"."id" AS "Post3_categories_id", "Post3_categories"."name" AS "Post3_categories_name", "Post3_attach"."id" AS "Post3_attach_id", "Post3_attach"."attr" AS "Post3_attach_attr" FROM "post3" "Post3" LEFT JOIN "post3_categories_category" "Post3_Post3_categories" ON "Post3_Post3_categories"."post3Id"="Post3"."id" LEFT JOIN "category" "Post3_categories" ON "Post3_categories"."id"="Post3_Post3_categories"."categoryId"  LEFT JOIN "attach" "Post3_attach" ON "Post3_attach"."id"="Post3"."attachId" WHERE "Post3"."id" IN (1)
 
 > post3
+Post3 {
+  id: 1,
+  contents: 'contents-1',
+  createdAt: 2021-07-11T16:42:14.180Z,
+  updatedAt: 2021-07-11T16:42:14.180Z,
+  categories: [
+    Category { id: 1, name: 'category-1' },
+    Category { id: 2, name: 'category-2' },
+    Category { id: 3, name: 'category-3' }
+  ],
+  attach: Attach { id: 1, attr: 'attr-1' }
+}
+```
+
+* Query Builder を使うとき
+
+Eager relations は Repository.find 系の API でしか動作しません。
+
+```typescript
+> await getConnection().getRepository(Post3).createQueryBuilder().limit(1).getOne()
+query: SELECT "Post3"."id" AS "Post3_id", "Post3"."contents" AS "Post3_contents", "Post3"."createdAt" AS "Post3_createdAt", "Post3"."updatedAt" AS "Post3_updatedAt", "Post3"."userId" AS "Post3_userId", "Post3"."attachId" AS "Post3_attachId" FROM "post3" "Post3" LIMIT 1
+
+Post3 {
+  id: 1,
+  contents: 'contents-1',
+  createdAt: 2021-07-11T16:42:14.180Z,
+  updatedAt: 2021-07-11T16:42:14.180Z
+}
+```
+
+Query Builder を使うときは `leftJoinAndSelect()` を使って明示的にテーブルを結合して取得する必要があります。
+
+```typescript
+> await getConnection().getRepository(Post3).createQueryBuilder("post")
+    .leftJoinAndSelect("post.categories", "category")
+    .leftJoinAndSelect("post.attach", "attach").getOne()
+query: SELECT "post"."id" AS "post_id", "post"."contents" AS "post_contents", "post"."createdAt" AS "post_createdAt", "post"."updatedAt" AS "post_updatedAt", "post"."userId" AS "post_userId", "post"."attachId" AS "post_attachId", "category"."id" AS "category_id", "category"."name" AS "category_name", "attach"."id" AS "attach_id", "attach"."attr" AS "attach_attr" FROM "post3" "post" LEFT JOIN "post3_categories_category" "post_category" ON "post_category"."post3Id"="post"."id" LEFT JOIN "category" "category" ON "category"."id"="post_category"."categoryId"  LEFT JOIN "attach" "attach" ON "attach"."id"="post"."attachId"
+
 Post3 {
   id: 1,
   contents: 'contents-1',
@@ -388,6 +472,7 @@ test=# select count(1) from post3_categories_category ;
 ### Entity の設定違いによるベンチマーク
 
 次のようなベンチマークのためのテストを書いてみました。
+Query Builder を使ったこの方法だと Post3 では Eager loading しないのでその違いも後でみてみます。
 
 ```typescript
 async function getMany<T>(repo: Repository<T>, n: number): Promise<number> {
@@ -404,39 +489,32 @@ async function getMany<T>(repo: Repository<T>, n: number): Promise<number> {
 * QueryBuilder.getMany()
 * QueryBuilder.getRawMany()
 
-TypeORM でデータを取得するとき、大きくわけて2通りの API があります。
-
-* [Repository APIs](https://github.com/typeorm/typeorm/blob/master/docs/repository-api.md)
-* [Select using Query Builder](https://github.com/typeorm/typeorm/blob/master/docs/select-query-builder.md)
-
-Repository API は高レベル API となっており、内部的には Query Builder を使います。Query Builder を使った方が生成したい SQL をカスタマイズできます。
-
-Repository.find() と QueryBuilder.getMany() は同じ結果になることを確認したので、本稿では QueryBuilder で呼び出す API の結果のみに限定して比較します。
-
 ```bash
 $ yarn test --testNamePattern RelationId
   ● Console
       RelationId Repository.find()
-      RelationId QueryBuilder().getMany()
-      RelationId QueryBuilder().getRawMany()
+      RelationId QueryBuilder.getMany()
+      RelationId QueryBuilder.getRawMany()
 ```
 
 私のマシンで実行した結果は次のようになりました。
 
 {{< gist t2y 6c9283cf620740a3c1fee5bb9ddfc800 "results.md" >}}
 
-`@RelationId` を用いた post1 で取得件数が増えるごとに経過時間が大きく増えていくことが確認できます。
+まず `find()` と `getMany()` では `@RelationId` を用いた post1 で取得件数が増えるごとに実行時間が大きく増えていくことが確認できます。
 これが取得件数に対して O(n^2) の計算量を要求するということです。
 
-`getMany()` は Entity オブジェクトを生成し、
+また `getMany()` は Entity オブジェクトを生成し、
 `getRawMany()` は SQL を実行して返ってきたデータを Entity 型ではなく JavaScript の Object 型で返します。
-メソッド名の通り、生データを取得するための API になります。
+メソッド名の通り、生データを取得するための API になるので Entity 設定の違いに依らず実行時間はほぼ同じになります。
 
 TypeORM では `getMany()` と `getRawMany()` は意識して使い分けることが重要です。
 この結果からもわかるように `getMany()` を使って Entity を生成するときに様々な処理が行われており、
 それがパフォーマンスに大きく影響を与える可能性があるからです。
 
-この結果をみると、(大きな差ではないですが) Lazy relations の post2 よりも Eager relations の post3 の方が速い結果になっていることもわかります。
+Post3 (Eager relations) の `find()` と `getMany()` を比べると、Eager loading していることによる差異を確認できます。
+さらに (大きな差ではないですが) Lazy relations の post2 よりも、
+実際には Eager loading しない post3 の方が速い結果になっていることもわかります。
 Lazy relations に関するパフォーマンスの問題もまた別の記事で書いてみたいと思います。
 
 ## まとめ
