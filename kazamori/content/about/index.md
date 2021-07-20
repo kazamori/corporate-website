@@ -82,6 +82,11 @@ Web アプリケーションを開発するときに必要なインフラの初�
 
 ### 著作/翻訳
 
+#### エキスパートPythonプログラミング改訂3版
+
+* https://www.kadokawa.co.jp/product/302105001236/
+* 5名による翻訳
+
 #### Software Design 2020年5月号の特集記事
 
 * https://gihyo.jp/magazine/SD/archive/2020/202005
@@ -112,8 +117,3 @@ Web アプリケーションを開発するときに必要なインフラの初�
 * 4名による共著
 * 担当した章
   * EX 補足資料のインストールとPython入門
-
-#### エキスパートPythonプログラミング改訂2版
-
-* https://www.kadokawa.co.jp/product/301801000262/
-* 5名による翻訳
