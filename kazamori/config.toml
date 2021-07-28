@@ -34,7 +34,7 @@ copyright = "Kazamori LLC"
 
 [[menu.main]]
     url = "/about/"
-    name = "会社概要"
+    name = "企業情報"
     weight = 2
 
 [[menu.main]]
