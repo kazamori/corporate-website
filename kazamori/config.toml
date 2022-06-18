@@ -13,6 +13,11 @@ copyright = "Kazamori LLC"
     blogs = "/:sections/:year/:month/:day/:slug/"
     news = "/:sections/:year/:month/:day/:slug/"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
     author = "Kazamori LLC"
     description = ""  # consider later
