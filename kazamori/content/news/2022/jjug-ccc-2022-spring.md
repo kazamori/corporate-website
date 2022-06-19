@@ -1,7 +1,7 @@
 ---
 title: "JJUG CCC 2022 SPRING に登壇しました"
 slug: jjug-ccc-2022-spring
-date: 2022-06-18T16:03:30+09:00
+date: 2022-06-19T11:01:30+09:00
 with_date: true
 tags: [java, event, github]
 ---
