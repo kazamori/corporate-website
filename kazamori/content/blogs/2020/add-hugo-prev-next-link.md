@@ -9,7 +9,7 @@ tags: [hugo, golang, template]
 Twitter のタイムラインでたまたま JJUG サイトを
 [Hugo](https://gohugo.io/) を使ってリニューアルしたという投稿をみかけました。
 
-{{< tweet 1296248908268494848 >}}
+{{< tweet user="cero_t" id="1296248908268494848" >}}
 
 当社のサイトも Hugo で作っているのもあり、どんな雰囲気か覗いてみました。
 
