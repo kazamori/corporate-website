@@ -20,9 +20,8 @@ copyright = "Kazamori LLC"
 
 [params]
     author = "Kazamori LLC"
-    description = ""  # consider later
-    logo = "green-logo-with-typography.png"
-    ogpLogo = "green-logo-for-ogp.png"
+    description = "Kazamori corporate site"
+    ogpLogo = "kazamori-ogp.jpg"
     rssLogo = "green-logo-with-spaces.png"
     githubUsername = "kazamori"
     accent = "#009933" # dark colors do best
