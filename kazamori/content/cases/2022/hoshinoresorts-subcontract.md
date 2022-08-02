@@ -43,5 +43,6 @@ CI/CD に GitHub Actions を活用しており、当社もこの技術領域に�
 さらに同社の大橋氏が Github Actions を活用した新しい Java の開発スタイルを JJUG CCC 2022 Spring で発表します。素早くプロダクトをリリースするために継続的デリバリーを強く意識した開発スタイルに取り組んでいる事例になります。
 
 * [開発者にやさしく、柔軟性、安全性を高めたGithub ActionsベースのCI/CDを構築する](https://fortee.jp/jjug-ccc-2022-spring/proposal/153b87bf-85c4-4274-9954-4e3f614724cb)
+* [【登壇報告】JJUG CCC 2022 Spring で語りきれなかった技術的なお話](https://note.com/hoshino_technote/n/n6afff42aeee0)
 
 当社はフルリモートワークで開発しています。オンライン上のコミュニケーションは [Slack](https://slack.com/)、ミーティングは [ハドルミーティング](https://slack.com/intl/ja-jp/help/articles/4402059015315-Slack-%E3%81%A7%E3%83%8F%E3%83%89%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B) と [Google Meet](https://workspace.google.com/products/meet/)、課題管理は [Backlog](https://backlog.com/ja/) といったツールを主に使っています。
