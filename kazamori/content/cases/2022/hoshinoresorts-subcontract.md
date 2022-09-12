@@ -8,7 +8,7 @@ tags: [subcontract, adviser, hoshinoresorts]
 
 [星野リゾート](https://www.hoshinoresorts.com/) 様でシステム開発のお手伝いをした内容を紹介します。
 
-> {{< figure src="/cases/2022/images/hoshino-resorts-logo.png" link="https://www.hoshinoresorts.com/" target="_blank" alt="Hoshino Resorts LOGO" width="30%" >}}
+> {{< figure src="/cases/2022/images/hoshino-resorts-logo2.png" link="https://www.hoshinoresorts.com/" target="_blank" alt="Hoshino Resorts LOGO" width="50%" >}}
 
 > 『100年後に旅産業は世界で最も大切な平和維持産業になっている』
 > 
