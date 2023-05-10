@@ -37,6 +37,10 @@ Web アプリケーションを開発するときに必要なインフラの初�
 
 資本金: 300,000円
 
+法人番号: [6140003014531](https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=6140003014531)
+
+適格請求書発行事業者登録番号: [T6140003014531](https://www.invoice-kohyo.nta.go.jp/regno-search/detail?selRegNo=6140003014531)
+
 代表社員: 森本 哲也
 
 事業内容:
