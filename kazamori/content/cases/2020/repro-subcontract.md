@@ -1,5 +1,5 @@
 ---
-title: "Repro株式会社様 業務委託"
+title: "Repro株式会社様 システム開発"
 slug: repro-subcontract
 date: 2020-10-14T09:10:08+09:00
 with_date: true

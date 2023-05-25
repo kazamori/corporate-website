@@ -1,5 +1,5 @@
 ---
-title: "星野リゾート様 業務委託"
+title: "星野リゾート様 システム開発"
 slug: hoshinoresorts-subcontract
 date: 2022-04-26T08:16:35+09:00
 with_date: true
