@@ -49,3 +49,9 @@ UCIDM は ID 連携するときに既存の社内システムの変更を最小�
 * [go-ldap へのコントリビューション](https://blog.osstech.co.jp/posts/2023/08/go-ldap-contribution/)
 
 当社はフルリモートワークで開発しています。オンライン上のコミュニケーションは [Slack](https://slack.com/)、ミーティングは [ハドルミーティング](https://slack.com/intl/ja-jp/help/articles/4402059015315-Slack-%E3%81%A7%E3%83%8F%E3%83%89%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B) と [Google Meet](https://workspace.google.com/products/meet/)、課題管理とドキュメントは [GitLab](https://about.gitlab.com/) といったツールを主に使っています。
+
+### <span class="postscript">2024-06-15 追記</span>
+
+その後のプロダクト開発における課題管理とイテレーション開発を基本とした開発方法論について OSSTech 社 CTO 武田様と一緒に次のオーディオメディアで鼎談しました。当社の大事にしている価値観やチーム開発の雰囲気を伝えています。
+
+* [#95 年一ゲストのもりもとさんと OSSTechたけださんの二人をゲストに 課題管理ツールを中心に開発を回したら良い方向に変わった話](https://podcast.terapyon.net/episodes/0104.html)

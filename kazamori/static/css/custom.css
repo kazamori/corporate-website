@@ -21,6 +21,11 @@ p.sample-style {
     margin-left: 25px;
 }
 
+span.postscript {
+    color: red;
+    font-style: bold;
+}
+
 span.prev-page {
     margin-top: 25px;
     float: left;
