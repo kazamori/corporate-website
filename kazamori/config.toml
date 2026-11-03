@@ -1,5 +1,5 @@
 baseURL = "https://kazamori.jp/"
-languageCode = "ja-jp"
+locale = "ja-jp"
 title = "kazamori"
 description = ""
 theme = "min_night"
