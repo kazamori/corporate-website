@@ -3,10 +3,12 @@ languageCode = "ja-jp"
 title = "kazamori"
 description = ""
 theme = "min_night"
-disqusShortname = ""
-googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "public/"]
 copyright = "Kazamori LLC"
+
+[services]
+  [services.disqus]
+    shortname = ""
 
 [permalinks]
     cases = "/:sections/:year/:month/:slug/"
