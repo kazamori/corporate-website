@@ -40,6 +40,66 @@ figure.common-style {
     text-align: center;
 }
 
+/* figures side by side */
+.figure-row {
+    display: flex;
+    gap: 1em;
+    align-items: flex-start;
+}
+
+.figure-row figure {
+    flex: 1;
+    margin: 0 0 1em 0;
+}
+
+.figure-row img {
+    width: 100%;
+    height: auto;
+}
+
+/* 狭い画面では縦に並べる */
+@media (max-width: 600px) {
+    .figure-row {
+        flex-direction: column;
+    }
+}
+
+/* figure and text side by side */
+.media-row {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.media-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.media-row figure {
+    flex: 0 0 50%;
+    margin: 0;
+}
+
+.media-row img {
+    width: 100%;
+    height: auto;
+}
+
+.media-row p {
+    flex: 1;
+    margin: 0;
+}
+
+/* 狭い画面では画像の下に本文を置く */
+@media (max-width: 600px) {
+    .media-row,
+    .media-row.reverse {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
 /* share buttons */
 .sns_section {
     display: inline-block;
